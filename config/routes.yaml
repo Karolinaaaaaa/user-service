@@ -1,0 +1,11 @@
+user_form:
+  path: /form
+  controller: App\Presentation\User\UserController::showForm
+
+user_submit:
+  path: /submit
+  controller: App\Presentation\User\UserController::submitForm
+
+user_list:
+  path: /users
+  controller: App\Presentation\User\UserController::listUsers

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>User List</title>
+		<link rel="stylesheet" href="/css/styles.css">
+	</head>
+	<body>
+		<h1>User List</h1>
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Surname</th>
+					<th>Attachments</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for user in users %}
+					<tr>
+						<td>{{ user.name }}</td>
+						<td>{{ user.surname }}</td>
+						<td>
+							{% for attachment in user.attachments %}
+								<a href="{{ attachment.filePath }}" target="_blank">{{ attachment.fileName }}</a><br>
+							{% else %}
+								No files
+							{% endfor %}
+						</td>
+					</tr>
+				{% else %}
+					<tr>
+						<td colspan="4">No users found.</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</body>
+</html>

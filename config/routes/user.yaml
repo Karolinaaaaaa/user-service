@@ -1,0 +1,4 @@
+user:
+  resource: ../../src/Presentation/User/
+  type: attribute
+  prefix: /api/users
