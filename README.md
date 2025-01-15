@@ -1,5 +1,13 @@
 # user-service
 
+## Instalacja composer
+
+W katalogu głównym projektu uruchom poniższe polecenie:
+
+```
+composer install
+```
+
 ## Zbudowanie i uruchomienie kontenerów
 
 W katalogu głównym projektu uruchom poniższe polecenie:
@@ -20,7 +28,7 @@ Aby upewnić się, że kontenery działają:
 docker ps
 ```
 
-## Wykonanie migracji bazy danych
+## Wykonanie migracji bazy danych (opcjonalnie)
 
 Wejdź do kontenera aplikacji:
 
@@ -28,7 +36,7 @@ Wejdź do kontenera aplikacji:
 docker exec -it user-service-app-1 bash
 ```
 
-## Wewnątrz kontenera uruchom:
+## Wewnątrz kontenera uruchom: (opcjonalnie)
 
 php bin/console doctrine:database:create
 php bin/console doctrine:migrations:migrate
